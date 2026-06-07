@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="229" fill="url(#bg)"/>
+  <text x="512" y="452" font-family="Helvetica Neue, Arial, sans-serif" font-weight="800" font-size="300" letter-spacing="-14" fill="#fff" text-anchor="middle">P4P</text>
+  <g fill="#fff">
+    <rect x="300" y="600" width="280" height="54" rx="27"/>
+    <rect x="392" y="690" width="332" height="54" rx="27" opacity="0.82"/>
+    <rect x="300" y="780" width="200" height="54" rx="27" opacity="0.62"/>
+  </g>
+</svg>
