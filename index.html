@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Plan4Projects — Project planning for Mac</title>
-<meta name="description" content="Professional project planning for macOS. Full Gantt charts, critical-path scheduling, resource leveling, and baselines. Opens Microsoft Project files. Free, native, and self-updating." />
-<meta property="og:title" content="Plan4Projects — Project planning for Mac" />
-<meta property="og:description" content="Full Gantt charts, critical-path scheduling, and resource management — native, fast, and free." />
+<title>Plan4Projects — Project planning for Mac, now with AI</title>
+<meta name="description" content="Professional project planning for macOS with a built-in AI assistant. Turn a supplier quote into a costed programme, edit in plain English, plus full Gantt charts, critical-path scheduling, resource leveling and baselines. Opens Microsoft Project files. Free, native, and self-updating." />
+<meta property="og:title" content="Plan4Projects — Project planning for Mac, now with AI" />
+<meta property="og:description" content="A built-in AI assistant that turns quotes into programmes — plus full Gantt charts, critical-path scheduling, and resource management. Native, fast, and free." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://plan4projects.com" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -65,6 +65,20 @@
   .dl-meta { font-size: 13px; opacity: .85; }
   .dl-meta b { font-weight: 600; }
   .shot { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 24px 60px rgba(0,0,0,.35); display: block; }
+  .badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.32); color: #fff; font-size: 13px; font-weight: 600;
+    padding: 5px 13px; border-radius: 999px; margin-bottom: 18px; }
+
+  /* ---- AI band ---- */
+  .ai-band { background: var(--bg-soft); padding: 76px 0; border-bottom: 1px solid var(--line); }
+  .ai-band .eyebrow { color: var(--indigo); font-weight: 700; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; margin: 0 0 10px; }
+  .ai-band h2 { font-size: 32px; letter-spacing: -.02em; margin: 0 0 14px; max-width: 740px; }
+  .ai-band > .wrap > p { color: var(--muted); font-size: 18px; max-width: 740px; margin: 0 0 30px; }
+  .ai-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .ai-point .ic { font-size: 22px; margin-bottom: 8px; }
+  .ai-point h3 { margin: 0 0 6px; font-size: 16px; letter-spacing: -.01em; }
+  .ai-point p { margin: 0; color: var(--muted); font-size: 14.5px; }
+  .ai-key { margin-top: 28px !important; font-size: 14px; color: var(--muted); max-width: 740px; }
 
   /* ---- Features ---- */
   .features { padding: 80px 0; }
@@ -127,6 +141,7 @@
 
       <div class="hero-grid">
         <div>
+          <span class="badge">✨ New — built-in AI assistant</span>
           <h1>Project planning,<br>done natively on Mac.</h1>
           <p class="lede">Full Gantt charts, critical-path scheduling, and resource management — fast, native, and free.</p>
           <p class="sub">Opens Microsoft&nbsp;Project (.mpp) files and exports Project&nbsp;XML. Universal app for Apple&nbsp;Silicon&nbsp;&&nbsp;Intel · macOS&nbsp;10.15+.</p>
@@ -193,6 +208,33 @@
           </svg>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ AI ============ -->
+  <section class="ai-band" id="ai">
+    <div class="wrap">
+      <p class="eyebrow">✨ New in 2.0</p>
+      <h2>Now with a built-in AI assistant.</h2>
+      <p>Describe a plan in plain English — or drop in a supplier quote — and Plan4Projects builds the whole programme: tasks, durations, dependencies and costs. Ask it to push dates, level resources, or explain the critical path, and the Gantt updates as it works.</p>
+      <div class="ai-points">
+        <div class="ai-point">
+          <div class="ic">📄</div>
+          <h3>Quote → programme</h3>
+          <p>Attach a PDF quote, a scan, or a CSV and turn it into a costed, phased schedule.</p>
+        </div>
+        <div class="ai-point">
+          <div class="ic">✏️</div>
+          <h3>Plain-English edits</h3>
+          <p>“Push everything after the survey by three days.” It makes the change and reschedules.</p>
+        </div>
+        <div class="ai-point">
+          <div class="ic">🔑</div>
+          <h3>Your key, your data</h3>
+          <p>Bring your own Anthropic key — stored only on your Mac, in the Keychain. No accounts, no server.</p>
+        </div>
+      </div>
+      <p class="ai-key">Free app, no subscription — add your own Anthropic API key and pay only for what you use (typically pennies per request).</p>
     </div>
   </section>
 
