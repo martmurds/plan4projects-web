@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Plan4Projects — Project planning for Mac, now with AI</title>
-<meta name="description" content="Professional project planning for macOS with a built-in AI assistant. Turn a supplier quote into a costed programme, edit in plain English, plus full Gantt charts, critical-path scheduling, resource leveling and baselines. Opens Microsoft Project files. Free, native, and self-updating." />
-<meta property="og:title" content="Plan4Projects — Project planning for Mac, now with AI" />
-<meta property="og:description" content="A built-in AI assistant that turns quotes into programmes — plus full Gantt charts, critical-path scheduling, and resource management. Native, fast, and free." />
+<title>Plan4Projects — AI project planning for Mac, now with Apple sync</title>
+<meta name="description" content="Professional project planning for macOS with a built-in AI assistant and Apple Calendar &amp; Reminders sync. Turn a supplier quote into a costed programme, edit in plain English, plus full Gantt charts, critical-path scheduling, resource leveling and baselines. Opens Microsoft Project files. Free, native, and self-updating." />
+<meta property="og:title" content="Plan4Projects — AI project planning for Mac, now with Apple sync" />
+<meta property="og:description" content="A built-in AI assistant that turns quotes into programmes, plus two-way Apple Calendar &amp; Reminders sync, full Gantt charts and critical-path scheduling. Native, fast, and free." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://plan4projects.com" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -72,6 +72,7 @@
 
   /* ---- AI band ---- */
   .ai-band { background: var(--bg-soft); padding: 76px 0; border-bottom: 1px solid var(--line); }
+  .sync-band { background: #f4f8ff; }
   .ai-band .eyebrow { color: var(--indigo); font-weight: 700; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; margin: 0 0 10px; }
   .ai-band h2 { font-size: 32px; letter-spacing: -.02em; margin: 0 0 14px; max-width: 740px; }
   .ai-band > .wrap > p { color: var(--muted); font-size: 18px; max-width: 740px; margin: 0 0 30px; }
@@ -142,7 +143,7 @@
 
       <div class="hero-grid">
         <div>
-          <span class="badge">✨ New — built-in AI assistant</span>
+          <span class="badge">✨ New — Apple Calendar &amp; Reminders sync</span>
           <h1>Project planning,<br>done natively on Mac.</h1>
           <p class="lede">Full Gantt charts, critical-path scheduling, and resource management — fast, native, and free.</p>
           <p class="sub">Opens Microsoft&nbsp;Project (.mpp) files and exports Project&nbsp;XML. Universal app for Apple&nbsp;Silicon&nbsp;&&nbsp;Intel · macOS&nbsp;10.15+.</p>
@@ -236,6 +237,33 @@
         </div>
       </div>
       <p class="ai-key">Free app, no subscription — add your own Anthropic API key and pay only for what you use (typically pennies per request).</p>
+    </div>
+  </section>
+
+  <!-- ============ APPLE SYNC ============ -->
+  <section class="ai-band sync-band" id="sync">
+    <div class="wrap">
+      <p class="eyebrow">✨ New in 3.0</p>
+      <h2>Now syncs to Apple Calendar &amp; Reminders.</h2>
+      <p>Connect once and Plan4Projects keeps a dedicated calendar and reminders list in step with your plan — on your Mac, iPhone and iPad. Your existing calendars stay untouched.</p>
+      <div class="ai-points">
+        <div class="ai-point">
+          <div class="ic">📅</div>
+          <h3>Calendar &amp; Reminders</h3>
+          <p>Every task becomes a calendar event and a due-dated reminder, kept in their own dedicated list.</p>
+        </div>
+        <div class="ai-point">
+          <div class="ic">🔄</div>
+          <h3>Two-way &amp; automatic</h3>
+          <p>Changes flow across in seconds. Tick a reminder off on your phone and the task completes in your plan.</p>
+        </div>
+        <div class="ai-point">
+          <div class="ic">📲</div>
+          <h3>All your devices</h3>
+          <p>It syncs through your own iCloud, so your programme travels with you. No accounts, no server.</p>
+        </div>
+      </div>
+      <p class="ai-key">Everything lives in its own “Plan4Projects” calendar and list that you can remove any time — and it all goes through your Apple account, never a Plan4Projects server.</p>
     </div>
   </section>
 
