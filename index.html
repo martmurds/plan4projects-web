@@ -3,13 +3,31 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Plan4Projects — AI project planning for Mac, now with Apple sync</title>
-<meta name="description" content="Professional project planning for macOS with a built-in AI assistant and Apple Calendar &amp; Reminders sync. Turn a supplier quote into a costed programme, edit in plain English, plus full Gantt charts, critical-path scheduling, resource leveling and baselines. Opens Microsoft Project files. Free, native, and self-updating." />
-<meta property="og:title" content="Plan4Projects — AI project planning for Mac, now with Apple sync" />
-<meta property="og:description" content="A built-in AI assistant that turns quotes into programmes, plus two-way Apple Calendar &amp; Reminders sync, full Gantt charts and critical-path scheduling. Native, fast, and free." />
+<title>Free Gantt Chart &amp; Project Planner for Mac — Plan4Projects</title>
+<meta name="description" content="Free, native Mac app for Gantt charts and project planning: critical-path scheduling, resources, baselines and an AI assistant. Opens Microsoft Project (.mpp) files." />
+<link rel="canonical" href="https://plan4projects.com/" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#4338ca" />
+<meta name="application-name" content="Plan4Projects" />
+<meta name="author" content="Martin Murdoch" />
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Plan4Projects" />
+<meta property="og:title" content="Free Gantt Chart &amp; Project Planner for Mac — Plan4Projects" />
+<meta property="og:description" content="A free, native Mac app for Gantt charts and project planning — critical-path scheduling, resources, baselines and a built-in AI assistant. Opens Microsoft Project (.mpp) files." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://plan4projects.com" />
+<meta property="og:url" content="https://plan4projects.com/" />
+<meta property="og:image" content="https://plan4projects.com/og-image.png" />
+<meta property="og:image:alt" content="Plan4Projects — a free Gantt chart project planner for Mac" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Free Gantt Chart &amp; Project Planner for Mac — Plan4Projects" />
+<meta name="twitter:description" content="A free, native Mac app for Gantt charts and project planning. Opens Microsoft Project (.mpp) files. AI assistant + Apple Calendar sync." />
+<meta name="twitter:image" content="https://plan4projects.com/og-image.png" />
+
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://api.github.com" />
 <style>
   :root {
     --blue: #3b82f6;
@@ -23,6 +41,8 @@
   html { scroll-behavior: smooth; }
   body {
     margin: 0;
+    background: #fff;
+    color-scheme: light;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: var(--ink);
     line-height: 1.55;
@@ -109,14 +129,129 @@
   footer { padding: 40px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
   footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
   footer a { color: var(--muted); }
+  footer nav a { margin-left: 18px; }
+
+  /* ---- FAQ ---- */
+  .faq { padding: 80px 0; }
+  .faq h2 { text-align: center; font-size: 32px; letter-spacing: -.02em; margin: 0 0 40px; }
+  .faq-list { max-width: 820px; margin: 0 auto; }
+  .faq details { border-bottom: 1px solid var(--line); padding: 18px 4px; }
+  .faq summary { font-weight: 600; font-size: 17px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; color: var(--muted); font-size: 24px; line-height: 1; flex: 0 0 auto; }
+  .faq details[open] summary::after { content: "\2013"; }
+  .faq details p { margin: 12px 0 0; color: var(--muted); font-size: 15.5px; max-width: 760px; }
 
   @media (max-width: 820px) {
     .hero-grid { grid-template-columns: 1fr; gap: 36px; }
     h1 { font-size: 40px; }
     .grid { grid-template-columns: 1fr; }
     .order-2 { order: 2; }
+    .ai-points { grid-template-columns: 1fr; }
   }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Plan4Projects",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Project Management",
+  "operatingSystem": "macOS 10.15 or later",
+  "description": "Free, native Mac app for Gantt charts and project planning: critical-path scheduling, resource management, baselines and a built-in AI assistant. Opens Microsoft Project (.mpp) files and exports Project XML.",
+  "url": "https://plan4projects.com/",
+  "downloadUrl": "https://github.com/martmurds/plan4projects-releases/releases/latest",
+  "softwareVersion": "0.3.1",
+  "datePublished": "2026-06-07",
+  "image": "https://plan4projects.com/og-image.png",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": [
+    "Gantt charts with critical path",
+    "Critical-path (CPM) scheduling",
+    "Resource management and leveling",
+    "Multiple baselines and earned-value tracking",
+    "Opens Microsoft Project (.mpp) files",
+    "Exports Microsoft Project XML",
+    "Built-in AI assistant (bring your own key)",
+    "Apple Calendar and Reminders sync"
+  ],
+  "publisher": { "@type": "Person", "name": "Martin Murdoch" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Plan4Projects free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — Plan4Projects is completely free. The full Gantt and critical-path scheduling engine, resource management, baselines and all seven views are included, with no subscription and nothing locked behind a paywall. There is an optional tip jar if it saves you time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I open Microsoft Project (.mpp) files on a Mac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Plan4Projects reads .mpp files (Microsoft Project 98 through 2019 and later) plus around 20 other formats, and exports Microsoft Project XML that opens natively in Project. It is one of the few free, native Mac apps that can open .mpp files."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Plan4Projects a good alternative to Microsoft Project for Mac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Microsoft does not make a Mac version of Project, so Plan4Projects gives Mac users a native, free way to plan: a complete critical-path (CPM) engine with four dependency types, seven constraint types, resource leveling, multiple baselines and earned-value tracking — and it opens and exports Microsoft Project files."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Plan4Projects runs entirely on your Mac with no account and no server, so you can plan with no internet connection. The optional AI assistant is the only feature that goes online, and only when you choose to use it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it run on Apple Silicon (M1, M2, M3, M4)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. It is a universal app that runs natively on both Apple Silicon and Intel Macs, on macOS 10.15 (Catalina) and later, and it is signed and notarized by Apple."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I make a Gantt chart on a Mac with it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — the Gantt chart is the heart of the app. Add tasks, set durations and dependencies, and Plan4Projects draws a live Gantt chart with the critical path highlighted, baseline bars and dependency arrows. Timeline, Network (PERT), Calendar and Dashboard views are built in too."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to install Java or anything else?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Plan4Projects bundles its own runtime, so there is nothing else to install — just download it, open it, and start planning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my project data private?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Your projects are stored locally on your Mac and are never sent to a Plan4Projects server. If you use the AI assistant you bring your own Anthropic API key, which is stored in the macOS Keychain."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -144,15 +279,15 @@
       <div class="hero-grid">
         <div>
           <span class="badge">✨ New — Apple Calendar &amp; Reminders sync</span>
-          <h1>Project planning,<br>done natively on Mac.</h1>
-          <p class="lede">Full Gantt charts, critical-path scheduling, and resource management — fast, native, and free.</p>
-          <p class="sub">Opens Microsoft&nbsp;Project (.mpp) files and exports Project&nbsp;XML. Universal app for Apple&nbsp;Silicon&nbsp;&&nbsp;Intel · macOS&nbsp;10.15+.</p>
+          <h1>The free Gantt chart &amp; project planner for Mac.</h1>
+          <p class="lede">Full critical-path scheduling, resources, baselines and a built-in AI assistant — fast, native, and free.</p>
+          <p class="sub">A real <strong>Microsoft&nbsp;Project alternative for Mac</strong>: opens <strong>.mpp</strong> files and exports Project&nbsp;XML. Universal app for Apple&nbsp;Silicon&nbsp;&amp;&nbsp;Intel · macOS&nbsp;10.15+.</p>
           <div class="cta">
             <a class="btn-dl" href="https://github.com/martmurds/plan4projects-releases/releases/latest/download/Plan4Projects.dmg">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v10.6l3.3-3.3 1.4 1.4L12 17.4 6.3 11.7l1.4-1.4L11 13.6V3h1zM5 19h14v2H5z"/></svg>
               Download for Mac
             </a>
-            <span class="dl-meta"><b>Free</b> · <a id="dl-ver" href="https://github.com/martmurds/plan4projects-releases/releases/latest">v0.2.1</a> · Signed &amp; notarized by Apple · ~113&nbsp;MB</span>
+            <span class="dl-meta"><b>Free</b> · <a id="dl-ver" href="https://github.com/martmurds/plan4projects-releases/releases/latest">v0.3.1</a> · Signed &amp; notarized by Apple · ~113&nbsp;MB</span>
           </div>
         </div>
 
@@ -307,6 +442,74 @@
     </div>
   </section>
 
+  <!-- ============ MICROSOFT PROJECT ALTERNATIVE ============ -->
+  <section class="ai-band" id="ms-project">
+    <div class="wrap">
+      <p class="eyebrow">Switching from Microsoft Project?</p>
+      <h2>A free Microsoft Project alternative for Mac.</h2>
+      <p>Microsoft doesn’t make a Mac version of Project, and most ways to open a <strong>.mpp</strong> file on a Mac are paid, web-based or view-only. Plan4Projects is a real, native macOS app that <strong>opens Microsoft Project files</strong> (and ~20 other formats) and exports Microsoft Project <strong>XML</strong> that Project reads natively — so you can pick up an existing programme, plan it properly with a full critical-path engine, and hand it straight back. No subscription, no browser, no Windows VM.</p>
+      <div class="ai-points">
+        <div class="ai-point">
+          <div class="ic">🆓</div>
+          <h3>Free, not a trial</h3>
+          <p>The whole scheduling engine is free — no seats, no monthly fee, no feature paywall.</p>
+        </div>
+        <div class="ai-point">
+          <div class="ic">💻</div>
+          <h3>Native, not a web app</h3>
+          <p>A genuine Mac app that runs offline. Your plans stay on your own Mac.</p>
+        </div>
+        <div class="ai-point">
+          <div class="ic">⇄</div>
+          <h3>Opens .mpp files</h3>
+          <p>Import Microsoft Project files and export Project XML for a clean round-trip.</p>
+        </div>
+      </div>
+      <p class="ai-key">Whatever you’re scheduling — construction, IT and software projects, security installations, events or maintenance — Plan4Projects brings Microsoft-Project-grade planning to the Mac, for free.</p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Is Plan4Projects free?</summary>
+          <p>Yes — Plan4Projects is completely free. The full Gantt and critical-path scheduling engine, resource management, baselines and all seven views are included, with no subscription and nothing locked behind a paywall. There is an optional tip jar if it saves you time.</p>
+        </details>
+        <details>
+          <summary>Can I open Microsoft Project (.mpp) files on a Mac?</summary>
+          <p>Yes. Plan4Projects reads .mpp files (Microsoft Project 98 through 2019 and later) plus around 20 other formats, and exports Microsoft Project XML that opens natively in Project. It is one of the few free, native Mac apps that can open .mpp files.</p>
+        </details>
+        <details>
+          <summary>Is Plan4Projects a good alternative to Microsoft Project for Mac?</summary>
+          <p>Microsoft does not make a Mac version of Project, so Plan4Projects gives Mac users a native, free way to plan: a complete critical-path (CPM) engine with four dependency types, seven constraint types, resource leveling, multiple baselines and earned-value tracking — and it opens and exports Microsoft Project files.</p>
+        </details>
+        <details>
+          <summary>Does it work offline?</summary>
+          <p>Yes. Plan4Projects runs entirely on your Mac with no account and no server, so you can plan with no internet connection. The optional AI assistant is the only feature that goes online, and only when you choose to use it.</p>
+        </details>
+        <details>
+          <summary>Does it run on Apple Silicon (M1, M2, M3, M4)?</summary>
+          <p>Yes. It is a universal app that runs natively on both Apple Silicon and Intel Macs, on macOS 10.15 (Catalina) and later, and it is signed and notarized by Apple.</p>
+        </details>
+        <details>
+          <summary>Can I make a Gantt chart on a Mac with it?</summary>
+          <p>Yes — the Gantt chart is the heart of the app. Add tasks, set durations and dependencies, and Plan4Projects draws a live Gantt chart with the critical path highlighted, baseline bars and dependency arrows. Timeline, Network (PERT), Calendar and Dashboard views are built in too.</p>
+        </details>
+        <details>
+          <summary>Do I need to install Java or anything else?</summary>
+          <p>No. Plan4Projects bundles its own runtime, so there is nothing else to install — just download it, open it, and start planning.</p>
+        </details>
+        <details>
+          <summary>Is my project data private?</summary>
+          <p>Yes. Your projects are stored locally on your Mac and are never sent to a Plan4Projects server. If you use the AI assistant you bring your own Anthropic API key, which is stored in the macOS Keychain.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ SUPPORT ============ -->
   <section class="support">
     <div class="wrap">
@@ -319,8 +522,13 @@
   <!-- ============ FOOTER ============ -->
   <footer>
     <div class="wrap">
-      <span>© 2026 Plan4Projects · plan4projects.com</span>
-      <span><a href="https://github.com/martmurds/plan4projects-releases/releases">Downloads &amp; release notes</a></span>
+      <span>© 2026 Plan4Projects · A free Gantt chart &amp; project planner for Mac</span>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#ms-project">MS&nbsp;Project alternative</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://github.com/martmurds/plan4projects-releases/releases">Downloads</a>
+      </nav>
     </div>
   </footer>
 

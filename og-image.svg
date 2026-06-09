@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Plan4Projects — free Gantt chart and project planner for Mac">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#4338ca"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="300" fill="#ffffff" opacity="0.06"/>
+
+  <!-- brand -->
+  <g transform="translate(80,66)">
+    <rect width="84" height="84" rx="19" fill="#ffffff" opacity="0.16"/>
+    <text x="42" y="55" font-family="Helvetica Neue, Arial, sans-serif" font-weight="800" font-size="38" fill="#ffffff" text-anchor="middle">P4P</text>
+  </g>
+  <text x="184" y="122" font-family="-apple-system, Helvetica Neue, Arial, sans-serif" font-weight="700" font-size="34" fill="#ffffff">Plan4Projects</text>
+
+  <!-- headline -->
+  <text x="80" y="298" font-family="-apple-system, Helvetica Neue, Arial, sans-serif" font-weight="800" font-size="66" fill="#ffffff" letter-spacing="-2">Free Gantt chart &amp;</text>
+  <text x="80" y="372" font-family="-apple-system, Helvetica Neue, Arial, sans-serif" font-weight="800" font-size="66" fill="#ffffff" letter-spacing="-2">project planner for Mac</text>
+
+  <!-- subline -->
+  <text x="80" y="442" font-family="-apple-system, Helvetica Neue, Arial, sans-serif" font-weight="500" font-size="29" fill="#ffffff" opacity="0.9">Critical-path scheduling · Opens Microsoft Project files · Native &amp; free</text>
+
+  <!-- mini gantt -->
+  <g transform="translate(80,496)">
+    <rect x="0" y="0" width="320" height="18" rx="9" fill="#ffffff" opacity="0.95"/>
+    <rect x="120" y="32" width="220" height="18" rx="9" fill="#ffffff" opacity="0.78"/>
+    <rect x="260" y="64" width="160" height="18" rx="9" fill="#ffffff" opacity="0.60"/>
+  </g>
+
+  <text x="1120" y="592" font-family="-apple-system, Helvetica Neue, Arial, sans-serif" font-weight="600" font-size="26" fill="#ffffff" opacity="0.92" text-anchor="end">plan4projects.com</text>
+</svg>
