@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Free Microsoft Project Alternative for Mac — Plan4Projects</title>
+<meta name="description" content="Plan4Projects is a free, native Mac alternative to Microsoft Project. Opens .mpp files, full critical-path Gantt charts, resource and engineer scheduling — no account, no subscription." />
+<link rel="canonical" href="https://plan4projects.com/microsoft-project-alternative-for-mac/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Free Microsoft Project Alternative for Mac — Plan4Projects" />
+<meta property="og:description" content="A free, native Mac app that opens Microsoft Project files, does full critical-path Gantt scheduling, and plans engineers across jobs. No account, no subscription." />
+<meta property="og:url" content="https://plan4projects.com/microsoft-project-alternative-for-mac/" />
+<meta property="og:image" content="https://plan4projects.com/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<style>
+  :root {
+    --blue: #3b82f6; --indigo: #4338ca; --ink: #1d1d1f;
+    --muted: #6e6e73; --line: #e6e6eb; --bg-soft: #f5f5f7;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: #fff; color-scheme: light;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--indigo); }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+  .topbar { border-bottom: 1px solid var(--line); }
+  .topbar .wrap { display: flex; align-items: center; gap: 12px; padding: 16px 24px; }
+  .topbar .logo { width: 34px; height: 34px; border-radius: 9px; }
+  .topbar b { font-size: 17px; letter-spacing: -.01em; }
+  .topbar .home { margin-left: auto; font-size: 14px; text-decoration: none; color: var(--muted); }
+  .topbar .home:hover { color: var(--ink); }
+
+  header.hero { padding: 56px 0 12px; }
+  .crumb { font-size: 13px; color: var(--muted); margin: 0 0 16px; }
+  .crumb a { color: var(--muted); }
+  h1 { font-size: 42px; line-height: 1.08; margin: 0 0 16px; letter-spacing: -.02em; font-weight: 800; }
+  .lede { font-size: 20px; color: var(--muted); margin: 0 0 26px; }
+  .btn-dl {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: linear-gradient(135deg, var(--blue), var(--indigo)); color: #fff;
+    font-size: 16px; font-weight: 700; text-decoration: none;
+    padding: 13px 24px; border-radius: 12px; box-shadow: 0 8px 22px rgba(67,56,202,.28);
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+  .btn-dl:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(67,56,202,.34); }
+  .btn-dl svg { width: 19px; height: 19px; }
+  .dl-meta { font-size: 13px; color: var(--muted); margin-left: 14px; }
+
+  main { padding: 8px 0 40px; }
+  main h2 { font-size: 28px; letter-spacing: -.02em; margin: 48px 0 14px; }
+  main h3 { font-size: 19px; margin: 30px 0 8px; letter-spacing: -.01em; }
+  main p { font-size: 17px; color: #2b2b2f; margin: 0 0 16px; }
+  main ul { color: #2b2b2f; font-size: 17px; padding-left: 22px; }
+  main li { margin: 8px 0; }
+  strong { font-weight: 700; }
+
+  .cmp-scroll { overflow-x: auto; margin: 20px 0 8px; }
+  table.cmp { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 640px; }
+  table.cmp th, table.cmp td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.cmp thead th { font-size: 14px; color: var(--muted); font-weight: 600; border-bottom: 2px solid var(--line); }
+  table.cmp thead th.us { color: var(--indigo); }
+  table.cmp tbody th { font-weight: 600; color: var(--ink); }
+  table.cmp td.us { background: #f4f6ff; font-weight: 600; }
+  .yes { color: #1a8a2e; font-weight: 700; }
+  .no { color: #c0392b; }
+  .partial { color: #b8860b; }
+
+  .callout { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 16px; padding: 24px 26px; margin: 32px 0; }
+  .callout h3 { margin-top: 0; }
+
+  .faq { margin: 40px 0; }
+  .faq details { border-bottom: 1px solid var(--line); padding: 16px 4px; }
+  .faq summary { font-weight: 600; font-size: 17px; cursor: pointer; list-style: none; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq details p { margin: 12px 0 0; color: var(--muted); font-size: 15.5px; }
+
+  .final-cta { text-align: center; background: var(--bg-soft); border-radius: 18px; padding: 44px 24px; margin: 40px 0; }
+  .final-cta h2 { margin: 0 0 10px; }
+  .final-cta p { color: var(--muted); max-width: 560px; margin: 0 auto 22px; }
+
+  footer { padding: 36px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  footer a { color: var(--muted); }
+  footer nav a { margin-left: 18px; }
+
+  @media (max-width: 720px) { h1 { font-size: 32px; } .dl-meta { display: block; margin: 10px 0 0; } }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="wrap">
+      <svg class="logo" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#4338ca"/></linearGradient></defs>
+        <rect width="1024" height="1024" rx="229" fill="url(#lg)"/>
+        <text x="512" y="452" font-family="Helvetica Neue, Arial, sans-serif" font-weight="800" font-size="300" letter-spacing="-14" fill="#fff" text-anchor="middle">P4P</text>
+        <g fill="#fff"><rect x="300" y="600" width="280" height="54" rx="27"/><rect x="392" y="690" width="332" height="54" rx="27" opacity="0.82"/><rect x="300" y="780" width="200" height="54" rx="27" opacity="0.62"/></g>
+      </svg>
+      <b>Plan4Projects</b>
+      <a class="home" href="/">← Home</a>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="crumb"><a href="/">Plan4Projects</a> → Microsoft Project alternative for Mac</p>
+      <h1>The free Microsoft Project alternative for Mac.</h1>
+      <p class="lede">A real native Mac app — full critical-path Gantt scheduling, opens your <strong>.mpp</strong> files, and plans your team across every job. No account, no subscription.</p>
+      <a class="btn-dl" href="https://github.com/martmurds/plan4projects-releases/releases/latest/download/Plan4Projects.dmg">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v10.6l3.3-3.3 1.4 1.4L12 17.4 6.3 11.7l1.4-1.4L11 13.6V3h1zM5 19h14v2H5z"/></svg>
+        Download free for Mac
+      </a>
+      <span class="dl-meta">Free · Signed &amp; notarized by Apple · macOS 10.15+</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p>Microsoft Project has never really been a Mac app. There's no native macOS version — you're stuck with the browser edition, a Windows VM, or a paid subscription per seat. If you work on a Mac and just want to plan a project properly, that's a poor deal.</p>
+    <p><strong>Plan4Projects</strong> is a free, native Mac app built to fill that gap. It does the core of what Microsoft Project does — critical-path (CPM) scheduling, task dependencies, resources, baselines, cost — opens and reads Microsoft Project <strong>.mpp</strong> files, and exports Project XML that Project opens back natively. And it adds the thing most planners miss: a way to schedule <em>people</em> across multiple jobs at once.</p>
+
+    <h2>How Plan4Projects compares</h2>
+    <div class="cmp-scroll">
+      <table class="cmp">
+        <thead>
+          <tr><th></th><th class="us">Plan4Projects</th><th>Microsoft&nbsp;Project</th><th>ProjectLibre</th><th>Merlin&nbsp;Project</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>Price</th><td class="us"><span class="yes">Free</span></td><td>From ~$10–30 / user / mo</td><td>Free (open&nbsp;source)</td><td>Paid subscription</td></tr>
+          <tr><th>Native Mac app</th><td class="us"><span class="yes">Yes</span> (universal)</td><td><span class="no">No</span> — web or VM</td><td><span class="no">No</span> — Java</td><td><span class="yes">Yes</span></td></tr>
+          <tr><th>Opens .mpp files</th><td class="us"><span class="yes">Yes</span></td><td><span class="yes">Yes</span></td><td><span class="yes">Yes</span></td><td><span class="yes">Yes</span></td></tr>
+          <tr><th>Critical path (CPM)</th><td class="us"><span class="yes">Yes</span></td><td><span class="yes">Yes</span></td><td><span class="yes">Yes</span></td><td><span class="yes">Yes</span></td></tr>
+          <tr><th>Works offline, no account</th><td class="us"><span class="yes">Yes</span></td><td><span class="no">No</span></td><td><span class="yes">Yes</span></td><td><span class="partial">Partly</span></td></tr>
+          <tr><th>Team / engineer scheduling across jobs</th><td class="us"><span class="yes">Yes</span></td><td>Enterprise only</td><td><span class="no">Limited</span></td><td><span class="partial">Per&nbsp;project</span></td></tr>
+          <tr><th>Cross-job clash detection</th><td class="us"><span class="yes">Yes</span></td><td><span class="no">No</span></td><td><span class="no">No</span></td><td><span class="no">No</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:14px;color:var(--muted)">Microsoft Project is the more powerful enterprise tool, and Merlin Project is a polished paid Mac app. Plan4Projects wins where it counts for most people: it's free, it's genuinely native, it opens your existing plans, and it schedules your people — not just your tasks.</p>
+
+    <div class="callout">
+      <h3>The part Microsoft Project doesn't do: plan your people across jobs</h3>
+      <p>If you run a team that works across multiple sites — installers, field engineers, contractors — the hardest part isn't the Gantt chart, it's knowing <em>who is where</em>. Plan4Projects has an <strong>Engineer Planner</strong>: every person, every job, on one weekly board. Book someone onto a job for a date range and it writes straight into that job's plan and cost. If you double-book the same person on two sites the same day, it flags in <strong>red</strong> before it costs you. Then send each person their week straight to their phone calendar.</p>
+    </div>
+
+    <h2>Why it's a genuine alternative</h2>
+    <ul>
+      <li><strong>It opens your existing files.</strong> Import Microsoft Project <code>.mpp</code> files (and ~20 other formats), and export Project XML that Project reads back.</li>
+      <li><strong>Real scheduling, not a to-do list.</strong> A full critical-path engine — four dependency types with lag, seven constraint types, resource leveling, multiple baselines and earned-value tracking.</li>
+      <li><strong>Native and fast.</strong> A universal app for Apple Silicon and Intel, signed and notarized by Apple. No browser tab, no VM, no Java runtime to babysit.</li>
+      <li><strong>No account, no subscription.</strong> Download it, open it, plan. Your files stay on your Mac.</li>
+    </ul>
+
+    <div class="faq">
+      <h2>Questions</h2>
+      <details open><summary>Is it really free?</summary><p>Yes — free to download and use, no account and no subscription. There's an optional tip jar if you'd like to support it, but nothing is gated.</p></details>
+      <details><summary>Can it open my Microsoft Project files?</summary><p>Yes. Plan4Projects reads <code>.mpp</code> files from Project 98 through 2019+, plus about 20 other formats, and exports Microsoft Project XML (MSPDI) that Project opens natively.</p></details>
+      <details><summary>Does it work offline?</summary><p>Completely. It's a native app that runs entirely on your Mac — no login, no cloud requirement. Your project files never leave your machine unless you choose to share them.</p></details>
+      <details><summary>Which Macs does it run on?</summary><p>Any Mac on macOS 10.15 or later — a single universal build runs natively on both Apple Silicon and Intel.</p></details>
+    </div>
+
+    <div class="final-cta">
+      <h2>Try it — it's free.</h2>
+      <p>A native Mac project planner that opens your Microsoft Project files and plans your whole team.</p>
+      <a class="btn-dl" href="https://github.com/martmurds/plan4projects-releases/releases/latest/download/Plan4Projects.dmg">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v10.6l3.3-3.3 1.4 1.4L12 17.4 6.3 11.7l1.4-1.4L11 13.6V3h1zM5 19h14v2H5z"/></svg>
+        Download free for Mac
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Plan4Projects · A free Gantt chart &amp; project planner for Mac</span>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/#faq">FAQ</a>
+        <a href="https://github.com/martmurds/plan4projects-releases/releases/latest">Download</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is Plan4Projects really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — free to download and use, with no account and no subscription. There is an optional tip jar, but nothing is gated." } },
+      { "@type": "Question", "name": "Can Plan4Projects open Microsoft Project files?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. It reads .mpp files from Project 98 through 2019+ plus about 20 other formats, and exports Microsoft Project XML that Project opens natively." } },
+      { "@type": "Question", "name": "Does it work offline?", "acceptedAnswer": { "@type": "Answer", "text": "Completely. It is a native Mac app that runs entirely on your Mac with no login or cloud requirement." } },
+      { "@type": "Question", "name": "Which Macs does it run on?", "acceptedAnswer": { "@type": "Answer", "text": "Any Mac on macOS 10.15 or later; a single universal build runs natively on Apple Silicon and Intel." } }
+    ]
+  }
+  </script>
+</body>
+</html>
